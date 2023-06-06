@@ -4,6 +4,7 @@ import {
   comprobarEstadoPartida,
   setPuntos,
 } from "./model";
+
 import {
   generarNumeroAleatorio,
   transformaNumeroAleatorio,

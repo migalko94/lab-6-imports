@@ -12,6 +12,3 @@ export const generarPuntuacion = (cartaGenerada: number): number => {
   const puntosSumados = cartaGenerada < 10 ? cartaGenerada : 0.5;
   return partida.puntuacion + puntosSumados;
 };
-
-export const puntuacionTrasSuma = generarPuntuacion(partida.cartaGenerada);
-partida.setPuntos(puntuacionTrasSuma);
