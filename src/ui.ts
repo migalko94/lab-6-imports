@@ -3,6 +3,8 @@ import {
   EstadoPartida,
   comprobarEstadoPartida,
   setPuntos,
+  botonComprobarCarta,
+  botonMePlanto,
 } from "./model";
 
 import {
@@ -257,8 +259,13 @@ export const mostrarQueHabriaPasado = () => {
   mostrarMensajeResultadoPosible(estado);
 };
 
-export const botonComprobarCarta = document.getElementById("dame-carta");
-export const botonMePlanto = document.getElementById("me-planto");
-export const botonNuevaPartida = document.getElementById("nueva-partida");
-export const botonQueHabriaPasado =
-  document.getElementById("que-habria-pasado");
+export const handlerNuevaPartida = () => {
+  partida.reinicioImagen();
+  partida.puntuacionACero();
+  habilitarBotonComprobarCarta(true);
+  habilitarBotonMePlanto(true);
+  let mensaje: string = `Tu puntuación es ${partida.puntuacion}`;
+  mostrarMensaje(mensaje);
+  ocultaBotonNuevaPartida();
+  ocultaBotonQueHabriaPasado();
+};

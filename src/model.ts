@@ -40,3 +40,9 @@ export const partida = {
   reinicioImagen,
   setPuntos,
 };
+
+export const botonComprobarCarta = document.getElementById("dame-carta");
+export const botonMePlanto = document.getElementById("me-planto");
+export const botonNuevaPartida = document.getElementById("nueva-partida");
+export const botonQueHabriaPasado =
+  document.getElementById("que-habria-pasado");
